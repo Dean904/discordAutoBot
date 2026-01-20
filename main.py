@@ -73,17 +73,17 @@ async def on_raw_reaction_add(payload: discord.RawReactionActionEvent):
     if str(payload.emoji) == "✅":
         # 5a) run RCON whitelist command
         response = whitelist_player(server_host, server_port, server_password, mc_username)
-        if not response:
-            response = "Success!"
 
         # 5b) give them the Whitelisted role
         if member and role:
             await member.add_roles(role, reason="Samsara whitelist approved")
+            print(f"Added role {role} to member {member}")
 
         # 5b-2) set their nickname to their MC username
         if member:
             try:
                 await member.edit(nick=mc_username, reason="Set nickname to Minecraft username on whitelist acceptance")
+                print(f"Set nickname {mc_username} to member {member}")
             except Exception as e:
                 print(f"Failed to set nickname: {e}")
 
@@ -95,6 +95,7 @@ async def on_raw_reaction_add(payload: discord.RawReactionActionEvent):
                 f"Head over to {getting_started_mention} to get acquainted with the server!\n"
                 f"We're thrilled to have you, let us know if theres anything we can do to help 🧙‍♂️"
             )
+            print(f"Sent welcome message to member {member}")
         except discord.Forbidden:
             pass
 
