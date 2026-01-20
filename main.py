@@ -12,10 +12,10 @@ try:
 except ImportError:
     pass
 
-from discordAutoWhitelistSamsara.BetaApplicationModal import BetaApplicationModal
-from discordAutoWhitelistSamsara.DiscordConstants import NOOB_ROLE_ID, STAFF_BOT_CHANNEL_ID, GUILD_ID, server_host, \
+from discordAutoBot.BetaApplicationModal import BetaApplicationModal
+from discordAutoBot.DiscordConstants import NOOB_ROLE_ID, STAFF_BOT_CHANNEL_ID, GUILD_ID, server_host, \
     server_port, server_password, GETTING_STARTED_CHANNEL_ID, BOT_COMMANDS_CHANNEL_ID, MEMBER_ROLE_ID
-from discordAutoWhitelistSamsara.JoinWhitelistGuide import setup_embed_on_load, ApplyView, HOW_TO_TITLE
+from discordAutoBot.JoinWhitelistGuide import setup_embed_on_load, ApplyView, HOW_TO_TITLE
 
 intents = discord.Intents.default()
 intents.messages = True

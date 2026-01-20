@@ -1,7 +1,7 @@
 import discord
 from discord import ui, TextStyle
 
-from discordAutoWhitelistSamsara.DiscordConstants import STAFF_BOT_CHANNEL_ID
+from discordAutoBot.DiscordConstants import STAFF_BOT_CHANNEL_ID
 
 
 class BetaApplicationModal(ui.Modal, title="Beta Application"):

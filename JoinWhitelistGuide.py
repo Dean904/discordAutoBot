@@ -1,8 +1,8 @@
 from discord import ui, ButtonStyle
 import discord
 
-from discordAutoWhitelistSamsara.BetaApplicationModal import BetaApplicationModal
-from discordAutoWhitelistSamsara.DiscordConstants import JOIN_BETA_CHANNEL_ID
+from discordAutoBot.BetaApplicationModal import BetaApplicationModal
+from discordAutoBot.DiscordConstants import JOIN_BETA_CHANNEL_ID
 
 HOW_TO_TITLE = "Apply for Whitelist"
 
